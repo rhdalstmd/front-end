@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과일 가게 키오스크</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🍎 과일 가게 키오스크</h1>
+
+  <!-- 메뉴 영역 -->
+  <div id="menu-area">
+    <h2>메뉴</h2>
+    <div class="menu-item" draggable="true" data-name="사과" data-price="2000">
+      <img src="apple.jpg" alt="사과">
+      <p>사과 - 2,000원</p>
+    </div>
+    <div class="menu-item" draggable="true" data-name="바나나" data-price="3500">
+      <img src="banana.jpg" alt="바나나">
+      <p>바나나 - 3,500원</p>
+    </div>
+    <div class="menu-item" draggable="true" data-name="포도" data-price="4500">
+      <img src="grape.jpg" alt="포도">
+      <p>포도 - 4,500원</p>
+    </div>
+    <div class="menu-item" draggable="true" data-name="귤" data-price="1000">
+      <img src="orange.jpg" alt="귤">
+      <p>귤 - 1,000원</p>
+    </div>
+    <div class="menu-item" draggable="true" data-name="망고" data-price="6500">
+      <img src="mango.jpg" alt="망고">
+      <p>망고 - 6,500원</p>
+    </div>
+  </div>
+
+  <!-- 장바구니 영역 -->
+  <div id="cart-area">
+    <h2>장바구니</h2>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>상품명</th>
+          <th>단가</th>
+          <th>수량</th>
+          <th>소계</th>
+          <th>삭제</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p>총 금액: <span id="total-price">0</span>원</p>
+    <button id="checkout-btn">결제</button>
+  </div>
+
+  <!-- 영수증 모달 -->
+  <div id="receipt-modal" style="display:none;">
+    <h2>영수증</h2>
+    <div id="receipt-content"></div>
+    <button id="close-receipt">닫기</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
